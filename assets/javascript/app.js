@@ -114,7 +114,7 @@ $(document).ready(function(){
             var userChoice = $("<div>");
             userChoice.addClass("answerchoice");
             userChoice.html(pick.choice[i]);
-            //assign array position to it so can check answer
+            //checks answer
             userChoice.attr("data-guessvalue", i);
             $("#answerblock").append(userChoice);
             //		}
@@ -124,10 +124,10 @@ $(document).ready(function(){
 
         //click function to select answer and outcomes
         $(".answerchoice").on("click", function () {
-            //grab array position from userGuess
+            //grab array position
             userGuess = parseInt($(this).attr("data-guessvalue"));
 
-            //correct guess or wrong guess outcomes
+    
             if (userGuess === pick.answer) {
                 stop();
                 correctCount++;
@@ -155,7 +155,7 @@ $(document).ready(function(){
             $("#answerblock").empty();
             timer = 20;
 
-            //run the score screen if all questions answered
+            //score screen
             if ((wrongCount + correctCount + unanswerCount) === qCount) {
                 $("#questionblock").empty();
                 $("#questionblock").html("<h3>Game Over!  Here's how you did: </h3>");
