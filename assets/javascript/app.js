@@ -107,8 +107,7 @@ $(document).ready(function(){
         /*	if (pick.shown) {
     		displayQuestion();
         	} else {
-        		console.log(pick.question);
-        iterate through answer array and display */
+        		console.log(pick.question);*/
         $("#questionblock").html("<h2>" + pick.question + "</h2>");
         for (var i = 0; i < pick.choice.length; i++) {
             var userChoice = $("<div>");
